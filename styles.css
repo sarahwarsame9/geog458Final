@@ -1,0 +1,107 @@
+/* General body and layout styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+header {
+    background-color: #2f4f4f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#container {
+    display: flex;
+    height: 100vh;
+}
+
+#map {
+    width: 75%;
+    height: 100%;
+    position: relative;
+}
+
+/* Sidebar Styling */
+#sidebar {
+    width: 50%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+#chart-container {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+#data-sources {
+    margin-top: 30px;
+}
+
+#data-sources h3 {
+    font-size: 18px;
+}
+
+#data-sources ul {
+    list-style: none;
+    padding: 0;
+}
+
+#data-sources ul li {
+    margin: 10px 0;
+}
+
+#data-sources a {
+    color: #007cbf;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#data-sources a:hover {
+    text-decoration: underline;
+}
+
+/* Bar Chart Title and Labels */
+#populationChart {
+    height: 300px;
+}
+
+/* Legend styling for metro stops and population data */
+#legend {
+    position: absolute;
+    bottom: 20px; /* Position the legend at the bottom */
+    left: 20px;   /* Position the legend on the left */
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    line-height: 1.5;
+    z-index: 1; /* Make sure the legend stays on top of the map */
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border-radius: 3px;
+}
+
+/* Specific legend item for metro transit stop */
+.legend-metro-stop {
+    width: 12px;  /* Smaller circle */
+    height: 12px; /* Smaller circle */
+    border-radius: 50%;  /* Circular shape */
+    background-color: #007cbf;  /* Metro stop color */
+}

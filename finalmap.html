@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metro Transit Accessibility in The Greater Seattle Area</title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+</head>
+<body>
+
+  <!-- Title Section -->
+  <header>
+    <h1>Metro Transit Accessibility in The Greater Seattle Area</h1>
+  </header>
+
+  <!-- Main container for map and sidebar -->
+  <div id="container">
+    <!-- Map Section -->
+    <div id="map"></div>
+
+    <!-- Sidebar Section (Bar Chart, Legend, and Information) -->
+    <div id="sidebar">
+      <!-- Bar Chart Section -->
+      <div id="chart-container">
+        <canvas id="disabilitiesChart"></canvas>
+      </div>
+
+      <!-- Explanation Paragraph under the Bar Chart -->
+      <p>
+        The bar graph provides a visual representation of the number of individuals with disabilities across various suburbs, highlighting the distribution and concentration of this population in different areas. Meanwhile, the map offers a spatial overview of the bus stop locations within each city, showing how accessible public transportation is to these communities. Together, these visuals help to identify potential gaps in transit accessibility for people with disabilities, offering insights into areas where further infrastructure development may be needed.
+      </p>
+
+      <!-- Data Source Links Section -->
+      <div id="data-sources">
+        <h3>Data Sources:</h3>
+        <ul>
+          <li><a href="https://geo.wa.gov/datasets/WADSHS::american-community-survey-acs-estimates-of-persons-with-disabilities-or-other-support-needs-/explore?layer=0&location=47.206793%2C-120.882291%2C7.17" target="_blank">American Community Survey - Disability Data</a></li>
+          <li><a href="https://gis-kingcounty.opendata.arcgis.com/datasets/17418ff4986440dcb7058b1c6533e94b_384/explore" target="_blank">King County Metro Transit Stops Data</a></li>
+          <li><a href="https://gis-kingcounty.opendata.arcgis.com/datasets/kingcounty::acs-total-population-acs-b01003-totalpop/about" target="_blank">King County ACS Total Population Data</a></li>
+        </ul>
+      </div>
+
+      <!-- Legend Section -->
+      <div id="legend">
+        <strong>Total Population by Census Tract</strong>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #e5f5e0;"></div> < 1,000
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #a1d99b;"></div> 1,000 - 5,000
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #41ab5d;"></div> 5,000 - 10,000
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #238b45;"></div> 10,000 - 20,000
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #005a32;"></div> > 20,000
+        </div>
+        <div class="legend-item">
+          <div class="legend-metro-stop"></div>  Metro Transit Stops
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="map.js"></script>
+  <script src="barChart.js"></script>
+
+</body>
+</html>
